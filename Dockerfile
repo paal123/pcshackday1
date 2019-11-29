@@ -11,6 +11,8 @@ COPY . .
 WORKDIR "/src/."
 RUN dotnet build "PcsHackday1.csproj" -c Release -o /app/build
 
+RUN apt-get update && apt-get install -y --no-install-recommends unzip
+
 FROM build AS publish
 RUN dotnet publish "PcsHackday1.csproj" -c Release -o /app/publish
 

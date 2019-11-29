@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  webapi:
+    image: pcshackday1
+    ports: 
+    - 8080:80
+    build:
+      context: .
+      dockerfile: Dockerfile
