@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcsHackday1", "PcsHackday1.csproj", "{A2BBA8B8-7DCB-4E25-B323-C1AF8FF18138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PcsHackday1", "PcsHackday1.csproj", "{A2BBA8B8-7DCB-4E25-B323-C1AF8FF18138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "..\NUnitTestProject1\NUnitTestProject1.csproj", "{AAA9E977-DCAB-4907-9242-2724D6F787DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A2BBA8B8-7DCB-4E25-B323-C1AF8FF18138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2BBA8B8-7DCB-4E25-B323-C1AF8FF18138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2BBA8B8-7DCB-4E25-B323-C1AF8FF18138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA9E977-DCAB-4907-9242-2724D6F787DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA9E977-DCAB-4907-9242-2724D6F787DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA9E977-DCAB-4907-9242-2724D6F787DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA9E977-DCAB-4907-9242-2724D6F787DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
