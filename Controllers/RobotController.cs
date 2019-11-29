@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using PcsHackday1.Models;
 
 namespace PcsHackday1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class RobotController : ControllerBase
     {
@@ -17,11 +13,17 @@ namespace PcsHackday1.Controllers
             return "Sandnesforfa1";
         }
 
-        // POST: api/Robot
-        [HttpPost]
-        public void Post([FromBody] string value)
+        // POST: /Robot/Move
+        [HttpPost("move")]
+        public MoveResult Move(RobotMove robotMove)
         {
+            var foo = robotMove;
 
+            return new MoveResult
+            {
+                Result = 10,
+                Duration = 13.37m
+            };
         }
     }
 }
