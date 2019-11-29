@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PcsHackday1.Models;
+using PcsHackday1.Services;
 
 namespace PcsHackday1.Controllers
 {
@@ -7,6 +8,10 @@ namespace PcsHackday1.Controllers
     [ApiController]
     public class RobotController : ControllerBase
     {
+        private readonly IRobotService _robotService;
+
+        public RobotController(IRobotService robotService) => _robotService = robotService;
+
         [HttpGet]
         public string Get()
         {
@@ -17,13 +22,7 @@ namespace PcsHackday1.Controllers
         [HttpPost("move")]
         public MoveResult Move(RobotMove robotMove)
         {
-            var foo = robotMove;
-
-            return new MoveResult
-            {
-                Result = 10,
-                Duration = 13.37m
-            };
+            return _robotService.Move(robotMove);
         }
     }
 }

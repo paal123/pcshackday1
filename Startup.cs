@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PcsHackday1.Services;
 
 namespace PcsHackday1
 {
@@ -26,6 +27,8 @@ namespace PcsHackday1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.Add(new ServiceDescriptor(typeof(IRobotService), new RobotService()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
